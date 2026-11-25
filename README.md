@@ -1,5 +1,5 @@
-JUSPAY Learnathon
-Amazon Automation
+## JUSPAY Learnathon
+## Amazon Automation
 
 ##  Technologies Used
 
