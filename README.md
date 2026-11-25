@@ -30,7 +30,8 @@ This project provides hands-on practice with:
 
 ## Prerequisites
 
-Update line no 52 and 54 with your amazon number and password.
+Update line no. 52 and 54 with your amazon number and password.
+Update line no. 117, 123, 132 and 142 with debit/credit card details.
 Make sure you have installed:
 
 1. Java JDK
