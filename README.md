@@ -30,6 +30,7 @@ This project provides hands-on practice with:
 
 ## Prerequisites
 
+Update line no 52 and 54 with your amazon number and password.
 Make sure you have installed:
 
 1. Java JDK
