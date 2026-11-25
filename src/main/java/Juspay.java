@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.List;
+
 
 public class Juspay {
     public static void main(String[] args) {
@@ -29,7 +29,7 @@ public class Juspay {
 
         driver.findElement(By.id("nav-search-submit-button")).click();
 
-        String originalTab = driver.getWindowHandle(); 
+        String originalTab = driver.getWindowHandle();
 
         WebElement product = wait.until(
                 ExpectedConditions.elementToBeClickable(By.xpath("(//img[@class='s-image'])[2]"))
@@ -49,9 +49,9 @@ public class Juspay {
 
         WebElement buy = wait.until(ExpectedConditions.elementToBeClickable(By.id("buy-now-button")));
         buy.click();
-        driver.findElement(By.id("ap_email_login")).sendKeys("enterYournNumber");
+        driver.findElement(By.id("ap_email_login")).sendKeys("8089264xxxx");
         driver.findElement(By.className("a-button-input")).click();
-        driver.findElement(By.id("ap_password")).sendKeys("enterYourPassword");
+        driver.findElement(By.id("ap_password")).sendKeys("password");
         driver.findElement(By.id("signInSubmit")).submit();
 
         WebElement addAddress = wait.until(
@@ -80,10 +80,7 @@ public class Juspay {
 
         select.selectByVisibleText("KERALA");
 
-        System.out.println(
-                "Selected state: " +
-                        select.getFirstSelectedOption().getText()
-        );
+
         WebElement useAddress = wait.until(
                 ExpectedConditions.elementToBeClickable(
                         By.cssSelector("input[aria-labelledby='checkout-primary-continue-button-id-announce']")
@@ -117,13 +114,13 @@ public class Juspay {
         WebElement cardNumber = wait.until(
                 ExpectedConditions.visibilityOfElementLocated(By.name("addCreditCardNumber"))
         );
-        cardNumber.sendKeys("4875 6299 8638 8015");
+        cardNumber.sendKeys("4830 xxxx 3371 xxxx");
 
         WebElement nickname = wait.until(
                 ExpectedConditions.visibilityOfElementLocated(By.name("ppw-accountHolderName"))
         );
         nickname.clear();
-        nickname.sendKeys("Raul Feest");
+        nickname.sendKeys("Elton Rajkumar");
 
 
         driver.findElement(
@@ -132,7 +129,7 @@ public class Juspay {
 
 
         driver.findElement(
-                By.xpath("//a[normalize-space()='09']")
+                By.xpath("//a[normalize-space()='02']")
         ).click();
 
 
@@ -142,7 +139,7 @@ public class Juspay {
 
 
         driver.findElement(
-                By.xpath("//a[normalize-space()='2030']")
+                By.xpath("//a[normalize-space()='2032']")
         ).click();
 
 
@@ -164,7 +161,7 @@ public class Juspay {
         WebElement cvv = wait.until(
                 ExpectedConditions.visibilityOfElementLocated(By.id("field"))
         );
-        cvv.sendKeys("012");
+        cvv.sendKeys("entercvv");
         driver.switchTo().defaultContent();
         WebElement useAddressButton = wait.until(
                 ExpectedConditions.elementToBeClickable(
@@ -180,6 +177,15 @@ public class Juspay {
 
         continueWithoutSaving.click();
 
+
+        WebElement useButton = wait.until(
+                ExpectedConditions.elementToBeClickable(
+                        By.cssSelector("input[aria-labelledby='checkout-primary-continue-button-id-announce']")
+                )
+        );
+
+        useButton.click();
+        driver.switchTo().defaultContent();
 
 
 
