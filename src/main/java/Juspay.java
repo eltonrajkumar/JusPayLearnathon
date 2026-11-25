@@ -29,7 +29,7 @@ public class Juspay {
 
         driver.findElement(By.id("nav-search-submit-button")).click();
 
-        String originalTab = driver.getWindowHandle(); // remember the search-results tab
+        String originalTab = driver.getWindowHandle(); 
 
         WebElement product = wait.until(
                 ExpectedConditions.elementToBeClickable(By.xpath("(//img[@class='s-image'])[2]"))
